@@ -1,0 +1,167 @@
+/* setup custom font: */
+@font-face {
+    font-family: "jjk_sr";
+    src: url("./jujutsu_kaisen_font/JJK_font.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    /* border: dashed blue 2px; // for debugging */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-35deg, rgba(255, 255, 255, 0.514), hotpink, red, black);
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-size: contain;
+    position: relative;
+}
+
+.section {
+    position: relative;
+    max-width: 60vw;
+    height: 70vh;
+    margin: 0;
+    padding: 3%;
+    background: rgba(255, 255, 255, 0.514);
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    z-index: 9;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background-color: #0000004f;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.mouth {
+    margin: 0;
+}
+
+.sukunaText {
+    color: #ac1d1d;
+    text-shadow: #ffffff 2px 2px 2px;
+    margin-bottom: 2.5rem;
+    font-family: 'jjk_sr', sans-serif;
+}
+
+.topic {
+    margin: 0;
+    color: #ec0a0a;
+    text-shadow: #5c0e0e57 6px 6px;
+    font-family: 'jjk_sr', sans-serif;
+    font-size: 2rem;
+}
+
+.text {
+    margin: 2px 0 50px 30%;
+    padding: 15px;
+    color: #ffffff;
+    font-family: 'jjk_sr', sans-serif;
+    border-radius: 16px;
+    background-color: #5c0e0e57;
+    transition: all 3s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.notes {
+    margin-top: 5vh;
+    padding: 5px;
+    /* border: solid blue 2px; //for debugging*/
+box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+
+.check {
+    transform: rotate(40deg);
+    filter: grayscale(100%);
+    
+    /* position: relative; */
+    top: 8rem;
+
+    width: 90px;
+    height: 90px;
+    transition: all 0.3s ease;
+    background: url('./images/sukunaChecked.png') no-repeat center center;
+    background-size: cover;
+}
+
+.check:hover {
+    transform: rotate(90deg);
+}
+
+.line {
+    text-decoration: line-through;
+    text-decoration-color: #ac1d1d;
+    text-decoration-thickness: 5px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#input-field {
+    max-width: 25%;
+    background: #aa3c3c65;
+    color: #ffffff;
+    border-radius: 30px;
+    margin: 0 30px;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: #b93535;
+    padding: 5px 20px;
+}
+
+.search>button {
+    font-family: 'jjk_sr', Courier, monospace;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 15px;
+    background: #ec0a0a;
+    color: #f2f2f2;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+#delete_btn
+{
+    margin-left: 9px;
+}
